@@ -324,7 +324,7 @@ class SPI(Buspirate):
             If I2C speed could not be set
         """
         try:
-            clock = SPEEDS[frequency]
+            clock = SPI.SPEEDS[frequency]
         except KeyError:
             raise ValueError('Clock speed not supported')
         self.write(0x60 | clock)
